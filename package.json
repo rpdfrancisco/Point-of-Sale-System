@@ -1,0 +1,19 @@
+{
+  "name": "water-refilling-pos",
+  "version": "1.0.0",
+  "description": "POS system for water refilling station",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "mongodb": "^6.15.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

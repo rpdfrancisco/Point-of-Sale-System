@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point of Sale | Water Refill POS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pos-container">
+        <h2>Water Refill POS</h2>
+
+        <label for="customer">Select Customer:</label>
+        <select id="customer">
+            <!-- Customers will be loaded dynamically -->
+        </select>
+
+        <label for="quantity">Quantity (Gallons):</label>
+        <input type="number" id="quantity" min="1" value="1" oninput="calculateTotal()">
+
+        <label for="price">Price per Gallon (₱):</label>
+        <input type="number" id="price" value="20" readonly>
+
+        <h3>Total Amount: ₱<span id="total">20</span></h3>
+
+        
+        <button onclick="processSale()">Process Sale</button>
+
+        <h3>Recent Sales</h3>
+        <table id="sales-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="recent-sales">
+                <!-- Sales data will be inserted here -->
+            </tbody>
+        </table>
+        
+
+        <button onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+    </div>
+    <script src="pos.js"></script>
+</body>
+</html>
